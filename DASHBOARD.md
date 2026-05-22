@@ -34,8 +34,8 @@
 | 02 | API 키 발급 & `.env` 설계 | | 1h | 🟢 | — |
 | 03 | 마크다운 파서 (`parser.py`) | | 2h | 🟢 | — |
 | 04 | 청킹 전략 결정 | ⭐ | 3h | 🟢 | `002-chunking-strategy.md` |
-| 05 | 임베딩 + Provider 추상화 | ⭐ | 2.5h | ⬜ | `003-embedding-provider.md` |
-| 06 | FAISS 인덱싱 (`indexer.py`) | ⭐ | 2h | ⬜ | `004-vector-store-choice.md` |
+| 05 | 임베딩 + Provider 추상화 | ⭐ | 2.5h | 🟢 | `003-embedding-provider.md` |
+| 06 | FAISS 인덱싱 (`indexer.py`) | ⭐ | 2h | 🟡 | `004-vector-store-choice.md` |
 | 07 | 검색 모듈 (`search.py`) | ⭐ | 2h | ⬜ | `005-retrieval-strategy.md` |
 | 08 | 생성 + 프롬프트 | ⭐ | 2.5h | ⬜ | `006-prompt-design.md` |
 | 09 | CLI (`main.py`) | | 1.5h | ⬜ | — |

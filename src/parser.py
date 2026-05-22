@@ -74,8 +74,12 @@ def parse_file(path: Path) -> NewsArticle:
 
 
 def load_all(data_dir: Path) -> list[NewsArticle]:
-    """data_dir 안의 모든 .md 파일을 NewsArticle 리스트로."""
-    return [parse_file(p) for p in sorted(data_dir.glob("*.md"))]
+    """data_dir 안의 모든 뉴스 .md 파일을 NewsArticle 리스트로.
+
+    README.md 같은 비뉴스 파일은 제외.
+    """
+    files = [p for p in sorted(data_dir.glob("*.md")) if p.name.lower() != "readme.md"]
+    return [parse_file(p) for p in files]
 
 
 if __name__ == "__main__":

@@ -14,6 +14,9 @@ venv/
 # Vector store (regenerable)
 data/vector_store/
 
+# Embedding cache (regenerable, 큰 파일들)
+data/embedding_cache/
+
 # News data (저작권 보호: AItimes © - 재배포 금지)
 data/*.md
 !data/README.md

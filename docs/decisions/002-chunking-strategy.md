@@ -8,13 +8,16 @@
 
 ## 최종 결정
 
-| 파라미터 | 값 | 비고 |
+| 파라미터 | Default 값 | 비고 |
 |---|---|---|
 | 라이브러리 | `RecursiveCharacterTextSplitter` (LangChain) | |
 | chunk_size | **500** | 글자수(character) 기준 |
 | chunk_overlap | **50 (10%)** | 경계 정보 유실 방지 |
 | separators | `["\n\n", "\n", "다. ", ". ", " ", ""]` | 한국어 종결(`다. `) 추가 |
 | 청킹 대상 | `article.body` (메타데이터 제외) | metadata는 Document.metadata에 별도 보존 |
+
+> ⚙️ **이 값들은 default이며 caller가 override 가능** — `chunk_articles(articles, chunk_size=..., chunk_overlap=..., separators=...)`.
+> AItimes 뉴스(평균 ~1200자 본문) 기준 분석된 값. 다른 데이터셋이면 자신의 길이 분포에 맞게 조정.
 
 ---
 

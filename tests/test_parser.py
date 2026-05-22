@@ -18,11 +18,18 @@ def test_parser_extracts_metadata():
     assert article.body, "body is empty"
 
 
-def test_parser_handles_all_52_files():
-    """52개 전부 에러 없이 파싱되고, 모두 title이 비어있지 않은지."""
+def test_parser_handles_all_files():
+    """data/ 안의 모든 뉴스 md (README 제외)가 에러 없이 파싱되고, 모두 title 있음."""
     articles = load_all(DATA_DIR)
 
-    assert len(articles) == 52, f"expected 52 articles, got {len(articles)}"
+    expected_count = len([
+        p for p in DATA_DIR.glob("*.md")
+        if p.name.lower() != "readme.md"
+    ])
+
+    assert len(articles) > 0, "no articles found in data/"
+    assert len(articles) == expected_count, \
+        f"expected {expected_count} articles, got {len(articles)}"
     for article in articles:
         assert article.title, f"empty title for source={article.source}"
 
