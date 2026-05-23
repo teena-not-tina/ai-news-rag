@@ -3,7 +3,7 @@
 > **프로젝트**: 옵시디언에 모은 52개 한국어 AI 뉴스 md를 RAG로 검색·요약하는 개인용 도구
 > **타임라인**: 3일 MVP (예산 ~23h)
 > **차별점**: OpenAI vs Gemini 동일 파이프라인 비교 (정확도 + 속도 + 비용 + 노이즈)
-> **최종 업데이트**: 2026-05-22
+> **최종 업데이트**: 2026-05-23
 
 ---
 
@@ -35,7 +35,7 @@
 | 03 | 마크다운 파서 (`parser.py`) | | 2h | 🟢 | — |
 | 04 | 청킹 전략 결정 | ⭐ | 3h | 🟢 | `002-chunking-strategy.md` |
 | 05 | 임베딩 + Provider 추상화 | ⭐ | 2.5h | 🟢 | `003-embedding-provider.md` |
-| 06 | FAISS 인덱싱 (`indexer.py`) | ⭐ | 2h | 🟡 | `004-vector-store-choice.md` |
+| 06 | FAISS 인덱싱 (`indexer.py`) | ⭐ | 2h | 🟢 | `004-vector-store-indexing.md` |
 | 07 | 검색 모듈 (`search.py`) | ⭐ | 2h | ⬜ | `005-retrieval-strategy.md` |
 | 08 | 생성 + 프롬프트 | ⭐ | 2.5h | ⬜ | `006-prompt-design.md` |
 | 09 | CLI (`main.py`) | | 1.5h | ⬜ | — |
