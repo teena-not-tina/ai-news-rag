@@ -27,3 +27,9 @@ data/*.md
 # IDE
 .vscode/
 .idea/
+
+# Personal learning notes (개인 학습용)
+docs/learnings/
+
+# Exploratory scripts (실험용 — 정식 평가 스크립트는 Task 11에서 추적)
+scripts/

@@ -9,11 +9,15 @@ from src.parser import load_all
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
+# 테스트 픽스처 상수
+ARTICLE_LIMIT = 3    # 빠른 테스트 위해 3개만
+FAKE_EMBED_DIM = 8   # FakeEmbeddings 차원 — 작을수록 테스트 빠름 (실제 차원과 무관)
+
 
 def test_build_index_creates_faiss_files(tmp_path):
     """build_index가 FAISS 인덱스 파일(index.faiss + index.pkl)을 저장하는지."""
-    articles = load_all(DATA_DIR)[:3]  # 빠른 테스트 위해 3개만
-    fake = FakeEmbeddings(size=1536)
+    articles = load_all(DATA_DIR)[:ARTICLE_LIMIT]
+    fake = FakeEmbeddings(size=FAKE_EMBED_DIM)
 
     out_path = build_index(
         articles=articles,
@@ -30,8 +34,8 @@ def test_build_index_creates_faiss_files(tmp_path):
 
 def test_build_index_preserves_metadata(tmp_path):
     """인덱스 로드 시 청크 metadata(title/source)가 유지되는지."""
-    articles = load_all(DATA_DIR)[:3]
-    fake = FakeEmbeddings(size=1536)
+    articles = load_all(DATA_DIR)[:ARTICLE_LIMIT]
+    fake = FakeEmbeddings(size=FAKE_EMBED_DIM)
 
     out_path = build_index(
         articles=articles,
