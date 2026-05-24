@@ -20,6 +20,9 @@ data/embedding_cache/
 # Retrieval logs (운영/평가 로그)
 data/logs/
 
+# 평가 결과 출력 (재생성 가능 + 청크 내용 저작권). golden_dataset.json/evaluate.py는 추적.
+eval/results/
+
 # News data (저작권 보호: AItimes © - 재배포 금지)
 data/*.md
 !data/README.md
