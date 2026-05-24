@@ -38,7 +38,7 @@
 | 06 | FAISS 인덱싱 (`indexer.py`) | ⭐ | 2h | 🟢 | `004-vector-store-indexing.md` |
 | 07 | 검색 모듈 (`search.py`) | ⭐ | 2h | 🟢 | `005-retrieval-strategy.md` |
 | 08 | 생성 + 프롬프트 | ⭐ | 2.5h | 🟢 | `006-prompt-design.md` |
-| 09 | CLI (`main.py`) | | 1.5h | ⬜ | — |
+| 09 | CLI (`main.py`) | | 1.5h | 🟢 | — |
 | 10 | 테스트 마무리 + E2E 스모크 | | 1h | ⬜ | — |
 | 11 | 평가 + Gemini 비교 | ⭐ | 3h | ⬜ | `007-evaluation-metrics.md` |
 | 12 | README.md 작성 | | 1h | ⬜ | — |
