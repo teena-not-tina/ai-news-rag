@@ -23,9 +23,10 @@ from langchain_openai import ChatOpenAI
 from src.search import DEFAULT_K, SearchHit, search
 
 # (model_id, price_per_1M_input_USD, price_per_1M_output_USD) — Task 11 비용 계산용
+# gemini 가격은 근사치 (2.5-flash 기준, 변동 가능 — 정확 비교 필요 시 확인).
 LLM_MODELS: dict[str, tuple[str, float, float]] = {
     "openai": ("gpt-4o-mini", 0.15, 0.60),
-    "gemini": ("gemini-2.0-flash", 0.0, 0.0),  # free tier
+    "gemini": ("gemini-2.5-flash", 0.30, 2.50),
 }
 
 DEFAULT_LLM_PROVIDER = "openai"
