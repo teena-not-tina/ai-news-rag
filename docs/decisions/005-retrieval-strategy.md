@@ -101,6 +101,8 @@ def search(query: str, provider: str = "openai-small", k: int = 4) -> list[Searc
 | 긴 기사에서 비슷한 청크 4개 다 뽑힐 위험 | MVP 감수. Task 11에서 측정 후 MMR 도입 판단 |
 | `published`가 ISO 문자열 — 날짜 필터 불가 | 메타데이터 필터링과 함께 v2-backlog (형식 정리 + DB 재검토 묶음) |
 | k=4 임의 선정 | v2-backlog "k값 sweep + 동적 k" 항목 참고 |
+| **Prompt-only grounding은 충분조건 X** (citation laundering 가능 — LLM은 weak association도 인용 붙임) | retrieval quality 자체를 대체할 수 없음을 전제. v2 MMR/Hybrid로 보완. Task 08 ADR에 한계 명시. |
+| **Score scale은 provider별 다름** (small 1.6 / large 1.5 / gemini 0.9 — 무관 baseline) | 단일 threshold 하드코딩 불가능 실증. MVP는 Rank-only. Task 11에서 provider별 분포 측정 후 v2에서 margin 기반(top-1 vs top-2 갭) 검토. |
 
 ---
 
