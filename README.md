@@ -2,6 +2,8 @@
 
 > 한국어 AI 뉴스 RAG 시스템 — *"내가 읽으려고 만든 AI 뉴스 비서"*
 
+🇰🇷 한국어 | 🇬🇧 [English](README.en.md)
+
 ![Status](https://img.shields.io/badge/status-MVP%20complete-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-0.3-green)
